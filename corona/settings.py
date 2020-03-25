@@ -27,7 +27,7 @@ SECRET_KEY = 'mye6chz=x66s!heda$lssu=l_81!=13yc(ymvwa!$oh-acvwm@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [".ap-northeast-2.compute.amazonaws.com"]
 # ALLOWED_HOSTS = ['222.118.92.251', 'allus.synology.me']
 
 
