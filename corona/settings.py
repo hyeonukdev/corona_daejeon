@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'django_crontab',
+    'certbot_django.server',
 ]
 
 MIDDLEWARE = [
