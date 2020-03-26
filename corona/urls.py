@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 from main import views as main_views
+import certbot_django.server.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -9,4 +10,5 @@ urlpatterns = [
     path('patient_admin', main_views.patient_admin, name="patient_admin"),
     path('path_add', main_views.path_add, name="path_add"),
     path('path_delete', main_views.path_delete, name="path_delete"),
+    path('\.well-known/', certbot_django.server.urls),
 ]
