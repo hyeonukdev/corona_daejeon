@@ -28,7 +28,7 @@ SECRET_KEY = 'mye6chz=x66s!heda$lssu=l_81!=13yc(ymvwa!$oh-acvwm@'
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = [".ap-northeast-2.compute.amazonaws.com"]
-# ALLOWED_HOSTS = ['222.118.92.251', 'allus.synology.me']
+# ALLOWED_HOSTS = ['222.118.92.251', 'allus.synology.me', 'daejeon.duckdns.org']
 
 
 # Application definition
@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_crontab',
     'main',
 ]
 
