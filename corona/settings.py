@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'django_crontab',
+    'asymmetric_jwt_auth',
     'certbot_django.server',
 ]
 
