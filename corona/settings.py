@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import sys
-import django
-
-CRONTAB_DJANGO_SETTINGS_MODULE = 'corona.settings.local_settings'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,11 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mye6chz=x66s!heda$lssu=l_81!=13yc(ymvwa!$oh-acvwm@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = [".ap-northeast-2.compute.amazonaws.com"]
-# ALLOWED_HOSTS = ['222.118.92.251', 'allus.synology.me', 'daejeon.duckdns.org']
 
 
 # Application definition
@@ -45,8 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'django_crontab',
-    'asymmetric_jwt_auth',
-    'certbot_django.server',
 ]
 
 MIDDLEWARE = [
