@@ -26,8 +26,10 @@ SECRET_KEY = 'mye6chz=x66s!heda$lssu=l_81!=13yc(ymvwa!$oh-acvwm@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ ".ap-northeast-2.compute.amazonaws.com"]
-
+ALLOWED_HOSTS = [
+    ".ap-northeast-2.compute.amazonaws.com",
+    ".nerogarret.shop",
+]
 
 # Application definition
 
@@ -123,9 +125,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # 배포시 10분에 한번씩 아래의 함수를 실행하여 데이터베이스를 자동으로 업데이트 합니다.
 # 데이터베이스에 환자 동선 정보가 업데이트 되었을 경우 아래에 설정한 이메일로 경보 알람이 갑니다.
 CRONJOBS = [
-    ('*/10 * * * *', 'main.views.get_mask_stores','>> /home/ubuntu/mask_stores.log'),
+    ('*/10 * * * *', 'main.views.get_mask_stores',
+     '>> /home/ubuntu/mask_stores.log'),
     ('*/10 * * * *', 'main.views.get_status', '>> /home/ubuntu/statistics.log'),
-    ('*/10 * * * *', 'main.views.get_patients','>> /home/ubuntu/patients_crawl.log'),
+    ('*/10 * * * *', 'main.views.get_patients',
+     '>> /home/ubuntu/patients_crawl.log'),
 ]
 
 # 경보 메일을 받기 위한 이메일 설정입니다.
