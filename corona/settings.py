@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     ".ap-northeast-2.compute.amazonaws.com",
-    ".nerogarret.shop",
+    ".daejeon-coronamap.site",
 ]
 
 # Application definition
